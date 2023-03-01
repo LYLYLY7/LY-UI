@@ -6,7 +6,7 @@
       <h2>一款普通的UI框架</h2>
       <p class="actions">
         <a href="https://github.com/">Github</a>
-        <a href="https://bilibili.com/">开始</a>
+        <router-link to="/doc">开始</router-link>
       </p>
     </div>
   </div>
@@ -39,7 +39,7 @@ export default {
       $h: 28px;
       height: $h;
       line-height: $h;
-      border-radius: $h/2;
+      border-radius: 14px;
       padding: 0 8px;
       background: white;
     }
