@@ -33,6 +33,23 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+aside {
+  background: #fbd36a;
+  width: 150px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 66px 16px 16px;
 
+  > h2 {
+    margin-bottom: 4px;
+  }
+
+  > ol {
+    > li {
+      padding: 4px 0;
+    }
+  }
+}
 </style>
