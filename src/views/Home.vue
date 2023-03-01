@@ -1,26 +1,26 @@
 <template>
-<div>
-  <div class="topNav">
-    <div class="logo"></div>
-    <div class="menu"></div>
+  <div>
+    <TopNav/>
+    <div class="banner">
+      <h1>LY UI</h1>
+      <h2>一款普通的UI框架</h2>
+      <p class="actions">
+        <a href="https://github.com/">Github</a>
+        <a href="https://bilibili.com/">开始</a>
+      </p>
+    </div>
   </div>
-  <div class="banner">
-    <h1>车轮UI</h1>
-    <h2>一个UI框架</h2>
-    <p class="actions">
-      <a href="https://www.bilibili.com/">Github</a>
-      <a href="https://www.bilibili.com/">开始</a>
-    </p>
-  </div>
-</div>
 </template>
 
-<script>
+<script lang="ts">
+import TopNav from '../components/TopNav.vue';
+
 export default {
-  name: 'Home.vue'
+  name: 'Home.vue',
+  components: {TopNav}
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
 </style>

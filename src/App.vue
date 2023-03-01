@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import First from './components/First.vue';
 </script>
 
 <template>
