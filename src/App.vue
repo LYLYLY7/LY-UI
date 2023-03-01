@@ -3,8 +3,10 @@ import First from './components/First.vue';
 </script>
 
 <template>
-  <div>hello</div>
-  <First />
+  <div>导航栏 |<router-link to="/">First</router-link>|
+  <router-link to="/2">Second</router-link></div>
+  <hr>
+  <router-view/>
 </template>
 
 <style scoped>
