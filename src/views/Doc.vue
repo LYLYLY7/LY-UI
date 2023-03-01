@@ -1,7 +1,7 @@
 <template>
   <div>
     <TopNav/>
-    <div class="content">
+    <div class="content" v-if="asideVisible">
       <aside>
         <h2>组件列表</h2>
         <ol>
@@ -26,10 +26,16 @@
 
 <script lang="ts">
 import TopNav from '../components/TopNav.vue';
+import {inject, Ref} from 'vue';
 
 export default {
   name: 'Doc',
-  components: {TopNav}
+  components: {TopNav},
+  setup(){
+    const asideVisible = inject<Ref<boolean>>('asideTure') //获得App.vue传的变量
+    console.log('Doc 获得边栏：'+ asideVisible?.value)
+    return {asideVisible} // 要用v-if类似访问，需要return{}
+  }
 };
 </script>
 
