@@ -31,8 +31,11 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   padding: 16px;
-  position: relative;
   z-index: 10;
 
   > .logo {
