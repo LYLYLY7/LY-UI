@@ -29,4 +29,8 @@ span {
   background: white;
   border-radius: $h2 / 2;
 }
+
+button:hover > span {
+  left: calc(100% - #{$h2} - 2px);  //在括号里面用$h2必须这样表示。
+}
 </style>
