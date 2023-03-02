@@ -5,6 +5,7 @@
       <li>菜单1</li>
       <li>菜单2</li>
     </ul>
+    <span class="toggleAside"></span>
   </div>
 </template>
 
@@ -29,6 +30,8 @@ export default {
 .topNav {
   background: #fea4b2;
   display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 16px;
   position: relative;
   z-index: 10;
@@ -45,6 +48,15 @@ export default {
 
     > li {
       margin: 0 1em;
+    }
+  }
+
+  @media (max-width: 500px) {
+    > .menu {
+      display: none //手机页面 隐藏菜单
+    }
+    > .logo{
+      margin: 0 auto; //手机页面 logo居中
     }
   }
 }
