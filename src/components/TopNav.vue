@@ -1,11 +1,11 @@
 <template>
   <div class="topNav">
-    <div class="logo" @click="toggleMenu">LOGO</div>
+    <div class="logo">LOGO</div>
     <ul class="menu">
       <li>菜单1</li>
       <li>菜单2</li>
     </ul>
-    <span class="toggleAside">1</span>
+    <span class="toggleAside" @click="toggleMenu">1</span>
   </div>
 </template>
 
@@ -52,7 +52,7 @@ export default {
   }
 
   > .toggleAside {
-    display: inline-block;
+    display: none;
     width: 24px;
     height: 24px;
     background: red;
@@ -68,6 +68,9 @@ export default {
     }
     > .logo {
       margin: 0 auto; //手机页面 logo居中
+    }
+    > .toggleAside {
+      display: inline-block;
     }
   }
 }
