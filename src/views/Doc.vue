@@ -1,8 +1,8 @@
 <template>
   <div>
     <TopNav/>
-    <div class="content" v-if="asideVisible">
-      <aside>
+    <div class="content">
+      <aside v-if="asideVisible">
         <h2>组件列表</h2>
         <ol>
           <li>
@@ -19,7 +19,9 @@
           </li>
         </ol>
       </aside>
-      <main>主内容</main>
+      <main>
+        <router-view />
+      </main>
     </div>
   </div>
 </template>
@@ -31,10 +33,10 @@ import {inject, Ref} from 'vue';
 export default {
   name: 'Doc',
   components: {TopNav},
-  setup(){
-    const asideVisible = inject<Ref<boolean>>('asideTure') //获得App.vue传的变量
-    console.log('Doc 获得边栏：'+ asideVisible?.value)
-    return {asideVisible} // 要用v-if类似访问，需要return{}
+  setup() {
+    const asideVisible = inject<Ref<boolean>>('asideTure'); //获得App.vue传的变量
+    console.log('Doc 获得边栏：' + asideVisible?.value);
+    return {asideVisible}; // 要用v-if类似访问，需要return{}
   }
 };
 </script>
@@ -54,7 +56,8 @@ aside {
       padding: 4px 0;
     }
   }
-  @media (max-width: 500px){
+
+  @media (max-width: 500px) {
     position: fixed;
     top: 0;
     left: 0;

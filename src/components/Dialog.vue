@@ -1,16 +1,10 @@
 <template>
-  <div>
-  <TopNav/>
-    这里是dialog组件
-  </div>
+  Dialog 文档
 </template>
 
 <script>
-import TopNav from './TopNav.vue';
-
 export default {
-  name: 'Dialog',
-  components: {TopNav}
+  name: 'Dialog'
 };
 </script>
 

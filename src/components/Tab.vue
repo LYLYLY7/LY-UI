@@ -1,16 +1,10 @@
 <template>
-  <div>
-    <TopNav/>
-    这里是tab组件
-  </div>
+  Tab 文档
 </template>
 
 <script>
-import TopNav from './TopNav.vue';
-
 export default {
-  name: 'Tab',
-  components: {TopNav}
+  name: 'Tab'
 };
 </script>
 

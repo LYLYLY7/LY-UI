@@ -1,16 +1,10 @@
 <template>
-<div>
-  <TopNav/>
-  这里是switch组件
-</div>
+  Switch 文档
 </template>
 
 <script>
-import TopNav from './TopNav.vue';
-
 export default {
-  name: 'Switch',
-  components: {TopNav}
+  name: 'Switch'
 };
 </script>
 
