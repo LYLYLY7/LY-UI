@@ -16,7 +16,6 @@ export default {
   name: 'TopNav',
   setup() {
     const asideVisible = inject<Ref<boolean>>('asideTure'); //获得App.vue传的变量
-    console.log('TopNav 获得边栏：' + asideVisible.value);
     const toggleMenu = () => {
       asideVisible.value = !asideVisible.value;
     };

@@ -5,13 +5,18 @@
 
 <script setup lang="ts">
 import {provide, ref} from 'vue';
+import {router} from './router';
 
 
 const width = document.documentElement.clientWidth;  //获取屏幕宽度,pc端常显示边栏
 //设置一个变量，通过bool值的改变，控制边栏的隐藏与出现
 const asideVisible = ref(width <= 500 ? false : true);
 provide('asideTure', asideVisible);  //将变量提供给子组件
-
+router.afterEach(() => {
+  if (width <= 500){
+    asideVisible.value = false; //手机端 点击switch组件能够自动关闭边栏
+  }
+});
 
 </script>
 

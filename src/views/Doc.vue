@@ -35,7 +35,6 @@ export default {
   components: {TopNav},
   setup() {
     const asideVisible = inject<Ref<boolean>>('asideTure'); //获得App.vue传的变量
-    console.log('Doc 获得边栏：' + asideVisible?.value);
     return {asideVisible}; // 要用v-if类似访问，需要return{}
   }
 };
